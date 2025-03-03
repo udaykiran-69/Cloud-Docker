@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: text-processing-deployment
+spec:
+  replicas: 2  # Keep 2 instances running
+  selector:
+    matchLabels:
+      app: text-processing
+  template:
+    metadata:
+      labels:
+        app: text-processing
+    spec:
+      restartPolicy: Always  # Ensures pods keep running
+      containers:
+      - name: text-processing-container
+        image: my-python-container  # Your built Docker image
+        imagePullPolicy: IfNotPresent
+        command: ["sleep", "infinity"]  # Keeps the container running
+

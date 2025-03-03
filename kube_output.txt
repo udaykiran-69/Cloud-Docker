@@ -1,0 +1,3 @@
+NAME                                          READY   STATUS    RESTARTS   AGE
+text-processing-deployment-68dd65c888-28nqc   1/1     Running   0          12s
+text-processing-deployment-68dd65c888-8xtll   1/1     Running   0          11s
